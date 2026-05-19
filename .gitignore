@@ -1,0 +1,22 @@
+# cache / database di Visual Studio
+.vs/
+
+doc/
+
+x64/
+x86/
+ARM64/
+
+PDFUICom/Generated Files/
+PDFUICom/x64/
+PDFUICom/x86/
+PDFUICom/ARM64/
+PDFUICom/.vs/
+
+RadaeeWinUI/bin/
+RadaeeWinUI/obj/
+RadaeeWinUI/.vs/
+
+lib/
+nuget/
+output/

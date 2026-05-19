@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "RadaeeWinUI (Package)": {
+      "commandName": "MsixPackage",
+      "nativeDebugging": true
+    },
+    "RadaeeWinUI (Unpackaged)": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}
