@@ -111,9 +111,15 @@ static public bool init()
 {
     load_data();
     int ret = RDUILib.RDGlobal.Active("[YOUR-LICENSE-KEY]");
-    return ret == 3;
+    return ret > 0;
 }
 ```
+The value of ret which is returned by RDUILib.RDGlobal.Active() method represents the license type. Please refer to following for detail:
+- value 1: Standard license
+- value 2: professional license
+- value 3: premium license
+- value 0: invalid license, the library is not activated successfully.
+
 
 2. Add the following code to your 'App' class to initialize and activate the library:
 ```csharp

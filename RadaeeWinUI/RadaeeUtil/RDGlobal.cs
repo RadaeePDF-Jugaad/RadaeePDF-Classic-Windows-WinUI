@@ -227,7 +227,7 @@ namespace RadaeeWinUI.RadaeeUtil
             String sver = RDUILib.RDGlobal.GetVersion();//this versioin string, example "20220225".
             //the key is binding to package "2625.RadaeePDFReader", can active version before "20260814"
             int ret = RDUILib.RDGlobal.Active("40794C86CB28D958D4982B8F29A1617CCDE960D26F3ECED4D9901716B343820B8B7AD8137E0EE717B2C4E4CED3640C71");
-            return ret == 3;
+            return ret > 0;
         }
 
         static public bool DrawDash(float[] dash, int dashCount, WriteableBitmap dib) {
