@@ -1,4 +1,4 @@
-# RadaeePDF SDK Master for Windows (WinUI 3 - Beta)
+# RadaeePDF SDK Classic for Windows (WinUI 3 - Beta)
 <img src="https://www.radaeepdf.com/wp-content/uploads/2024/08/solo_butterly_midres.png" style="width:100px;"> 
 
 > **DISCLAIMER (BETA)**  
@@ -48,12 +48,12 @@ You must enable Developer Mode on Windows:
 ## clone the repository:
 
 ```powershell
-git clone git@github.com:RadaeePDF-Jugaad/RadaeePDF-Master-Windows-WinUI.git
+git clone git@github.com:RadaeePDF-Jugaad/RadaeePDF-Classic-Windows-WinUI.git
 ```
 
 ## Nuget package
 
-We use **Nuget** for publishing and managing the native library files for Radaee Master SDK.
+We use **Nuget** for publishing and managing the native library files for Radaee Classic SDK.
 
 Important: before build the project, please restore the nuget packages first.
 
@@ -68,7 +68,7 @@ To quickly test the RadaeePDF SDK demo:
    - Click on **Clone a repository** (or File → Clone Repository)
    - Paste the repository URL:
      ```
-     https://github.com/RadaeePDF-Jugaad/RadaeePDF-Master-Windows-WinUI.git
+     https://github.com/RadaeePDF-Jugaad/RadaeePDF-Classic-Windows-WinUI.git
      ```
    - Click **Clone** and wait for the project to download
 
@@ -77,9 +77,6 @@ To quickly test the RadaeePDF SDK demo:
      ```bash
      # Standard git
      git pull
-     
-     # Using git-lts (if installed in your environment)
-     git-lts pull
      ```
 
 3. **Open the Solution**
