@@ -5,7 +5,7 @@
   <Import Project="packages\Microsoft.ProjectReunion.Foundation.0.8.12\build\native\Microsoft.ProjectReunion.Foundation.props" Condition="Exists('packages\Microsoft.ProjectReunion.Foundation.0.8.12\build\native\Microsoft.ProjectReunion.Foundation.props')" />
   <Import Project="packages\Microsoft.ProjectReunion.0.8.12\build\native\Microsoft.ProjectReunion.props" Condition="Exists('packages\Microsoft.ProjectReunion.0.8.12\build\native\Microsoft.ProjectReunion.props')" />
   <Import Project="packages\Microsoft.Windows.CppWinRT.2.0.210211.2\build\native\Microsoft.Windows.CppWinRT.props" Condition="Exists('packages\Microsoft.Windows.CppWinRT.2.0.210211.2\build\native\Microsoft.Windows.CppWinRT.props')" />
-  <Import Project="..\packages\RadaeePDF.Classic.Native.1.0.0\build\native\RadaeePDF.Classic.Native.props" Condition="Exists('..\packages\RadaeePDF.Classic.Native.1.0.0\build\native\RadaeePDF.Classic.Native.props')" />
+  <Import Project="..\packages\RadaeePDF.Classic.Native.1.0.2\build\native\RadaeePDF.Classic.Native.props" Condition="Exists('..\packages\RadaeePDF.Classic.Native.1.0.2\build\native\RadaeePDF.Classic.Native.props')" />
   <PropertyGroup Label="Globals">
     <CppWinRTOptimized>true</CppWinRTOptimized>
     <CppWinRTRootNamespaceAutoMerge>true</CppWinRTRootNamespaceAutoMerge>
@@ -252,7 +252,7 @@
     <Import Project="packages\Microsoft.ProjectReunion.Foundation.0.8.12\build\native\Microsoft.ProjectReunion.Foundation.targets" Condition="Exists('packages\Microsoft.ProjectReunion.Foundation.0.8.12\build\native\Microsoft.ProjectReunion.Foundation.targets')" />
     <Import Project="packages\Microsoft.ProjectReunion.WinUI.0.8.12\build\native\Microsoft.ProjectReunion.WinUI.targets" Condition="Exists('packages\Microsoft.ProjectReunion.WinUI.0.8.12\build\native\Microsoft.ProjectReunion.WinUI.targets')" />
     <Import Project="..\packages\Microsoft.Windows.CppWinRT.2.0.250303.1\build\native\Microsoft.Windows.CppWinRT.targets" Condition="Exists('..\packages\Microsoft.Windows.CppWinRT.2.0.250303.1\build\native\Microsoft.Windows.CppWinRT.targets')" />
-    <Import Project="..\packages\RadaeePDF.Classic.Native.1.0.1\build\native\RadaeePDF.Classic.Native.targets" Condition="Exists('..\packages\RadaeePDF.Classic.Native.1.0.1\build\native\RadaeePDF.Classic.Native.targets')" />
+    <Import Project="..\packages\RadaeePDF.Classic.Native.1.0.2\build\native\RadaeePDF.Classic.Native.targets" Condition="Exists('..\packages\RadaeePDF.Classic.Native.1.0.2\build\native\RadaeePDF.Classic.Native.targets')" />
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
@@ -267,6 +267,6 @@
     <Error Condition="!Exists('packages\Microsoft.ProjectReunion.WinUI.0.8.12\build\native\Microsoft.ProjectReunion.WinUI.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.ProjectReunion.WinUI.0.8.12\build\native\Microsoft.ProjectReunion.WinUI.targets'))" />
     <Error Condition="!Exists('..\packages\Microsoft.Windows.CppWinRT.2.0.250303.1\build\native\Microsoft.Windows.CppWinRT.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Windows.CppWinRT.2.0.250303.1\build\native\Microsoft.Windows.CppWinRT.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.Windows.CppWinRT.2.0.250303.1\build\native\Microsoft.Windows.CppWinRT.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Windows.CppWinRT.2.0.250303.1\build\native\Microsoft.Windows.CppWinRT.targets'))" />
-    <Error Condition="!Exists('..\packages\RadaeePDF.Classic.Native.1.0.1\build\native\RadaeePDF.Classic.Native.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\RadaeePDF.Classic.Native.1.0.1\build\native\RadaeePDF.Classic.Native.targets'))" />
+    <Error Condition="!Exists('..\packages\RadaeePDF.Classic.Native.1.0.2\build\native\RadaeePDF.Classic.Native.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\RadaeePDF.Classic.Native.1.0.2\build\native\RadaeePDF.Classic.Native.targets'))" />
   </Target>
 </Project>
