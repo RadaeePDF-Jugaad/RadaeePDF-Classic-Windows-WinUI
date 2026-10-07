@@ -5,7 +5,7 @@
   <Import Project="packages\Microsoft.ProjectReunion.Foundation.0.8.12\build\native\Microsoft.ProjectReunion.Foundation.props" Condition="Exists('packages\Microsoft.ProjectReunion.Foundation.0.8.12\build\native\Microsoft.ProjectReunion.Foundation.props')" />
   <Import Project="packages\Microsoft.ProjectReunion.0.8.12\build\native\Microsoft.ProjectReunion.props" Condition="Exists('packages\Microsoft.ProjectReunion.0.8.12\build\native\Microsoft.ProjectReunion.props')" />
   <Import Project="packages\Microsoft.Windows.CppWinRT.2.0.210211.2\build\native\Microsoft.Windows.CppWinRT.props" Condition="Exists('packages\Microsoft.Windows.CppWinRT.2.0.210211.2\build\native\Microsoft.Windows.CppWinRT.props')" />
-  <Import Project="..\packages\RadaeePDF.Classic.Native.1.0.0\build\native\RadaeePDF.Classic.Native.props" Condition="Exists('..\packages\RadaeePDF.Classic.Native.1.0.0\build\native\RadaeePDF.Classic.Native.props')" />
+  <Import Project="..\packages\RadaeePDF.Classic.Native.1.0.2\build\native\RadaeePDF.Classic.Native.props" Condition="Exists('..\packages\RadaeePDF.Classic.Native.1.0.2\build\native\RadaeePDF.Classic.Native.props')" />
   <PropertyGroup Label="Globals">
     <CppWinRTOptimized>true</CppWinRTOptimized>
     <CppWinRTRootNamespaceAutoMerge>true</CppWinRTRootNamespaceAutoMerge>
