@@ -83,6 +83,23 @@ namespace RadaeeWinUI.ViewModels
 
         public async Task OpenDocumentAsync()
         {
+            StorageFile? file = await PickDocumentFileAsync();
+            if (file != null)
+            {
+                await LoadDocumentAsync(file);
+            }
+        }
+
+        /// <summary>
+        /// Closes the current document (without saving) and opens the given file.
+        /// </summary>
+        public Task OpenFileAsync(StorageFile file)
+        {
+            return LoadDocumentAsync(file);
+        }
+
+        public async Task<StorageFile?> PickDocumentFileAsync()
+        {
             var picker = new FileOpenPicker
             {
                 SuggestedStartLocation = PickerLocationId.DocumentsLibrary
@@ -93,11 +110,18 @@ namespace RadaeeWinUI.ViewModels
             var hwnd = WinRT.Interop.WindowNative.GetWindowHandle(window);
             WinRT.Interop.InitializeWithWindow.Initialize(picker, hwnd);
 
-            StorageFile? file = await picker.PickSingleFileAsync();
-            if (file != null)
-            {
-                await LoadDocumentAsync(file);
-            }
+            return await picker.PickSingleFileAsync();
+        }
+
+        /// <summary>
+        /// True if the current document has changes that were not saved.
+        /// </summary>
+        public bool HasUnsavedChanges => _currentDocument != null && _pdfViewModel.HasUnsavedChanges;
+
+        /// <returns>false if the document could not be saved</returns>
+        public bool SaveDocument()
+        {
+            return _pdfViewModel.SaveDocument();
         }
 
         private async Task LoadDocumentAsync(StorageFile file, string password = "")
@@ -110,6 +134,10 @@ namespace RadaeeWinUI.ViewModels
             if (_currentDocument != null)
             {
                 DocumentInfo = _documentManager.GetDocumentInfo(_currentDocument);
+                if (DocumentInfo != null)
+                {
+                    DocumentInfo.FilePath = string.IsNullOrEmpty(file.Path) ? file.Name : file.Path;
+                }
                 _navigationService.SetTotalPages(DocumentInfo?.PageCount ?? 0);
                 _navigationService.GoToPage(0);
                 IsDocumentLoaded = true;
